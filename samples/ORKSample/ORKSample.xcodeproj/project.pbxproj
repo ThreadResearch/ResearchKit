@@ -466,7 +466,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/ORKSample/Info.plist";
+				INFOPLIST_FILE = ORKSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hellothread.ResearchKit.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,7 +488,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/ORKSample/Info.plist";
+				INFOPLIST_FILE = ORKSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hellothread.ResearchKit.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
