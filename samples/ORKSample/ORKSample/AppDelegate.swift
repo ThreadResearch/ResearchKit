@@ -30,6 +30,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import UIKit
 import ResearchKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        Fabric.with([Crashlytics.self])
+        
         let standardDefaults = NSUserDefaults.standardUserDefaults()
         if standardDefaults.objectForKey("ORKSampleFirstRun") == nil {
             ORKPasscodeViewController.removePasscodeFromKeychain()

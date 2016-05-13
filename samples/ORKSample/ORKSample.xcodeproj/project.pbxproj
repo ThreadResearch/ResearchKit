@@ -17,6 +17,8 @@
 		16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */; };
 		16BF5B6F1BE2BE77007C79C6 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */; };
 		16BF5B711BE2C989007C79C6 /* ProfileStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */; };
+		6BA17C761CE68E65008B134A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA17C741CE68E65008B134A /* Crashlytics.framework */; };
+		6BA17C771CE68E65008B134A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA17C751CE68E65008B134A /* Fabric.framework */; };
 		86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */; };
 		B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161479C51BD6CE8F0099A068 /* OnboardingViewController.swift */; };
 		B5BC85FD1BF1408500B0CFA5 /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168F25711BE052AD001D2D65 /* HealthDataStepViewController.swift */; };
@@ -66,6 +68,8 @@
 		16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ORKSample/ProfileViewController.swift; sourceTree = "<group>"; };
 		16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthClientType.swift; path = ORKSample/HealthClientType.swift; sourceTree = "<group>"; };
 		16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileStaticTableViewCell.swift; path = ORKSample/ProfileStaticTableViewCell.swift; sourceTree = "<group>"; };
+		6BA17C741CE68E65008B134A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		6BA17C751CE68E65008B134A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerViewController.swift; path = ORKSample/ResearchContainerViewController.swift; sourceTree = SOURCE_ROOT; };
 		B5C2073E1BEC16F00051D9D8 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerSegue.swift; path = ORKSample/ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		B5C207411BECBA8B0051D9D8 /* WithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WithdrawViewController.swift; path = ORKSample/WithdrawViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2A3CDD1C58F1DB00DA64B7 /* ResearchKit.framework in Frameworks */,
+				6BA17C761CE68E65008B134A /* Crashlytics.framework in Frameworks */,
 				BC2A3CA51C58E91E00DA64B7 /* HealthKit.framework in Frameworks */,
+				6BA17C771CE68E65008B134A /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,10 +218,12 @@
 		BC2A3CA81C58E92600DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BA17C741CE68E65008B134A /* Crashlytics.framework */,
+				6BA17C751CE68E65008B134A /* Fabric.framework */,
 				BC2A3CDC1C58F1DB00DA64B7 /* ResearchKit.framework */,
 				BC2A3CA41C58E91E00DA64B7 /* HealthKit.framework */,
 			);
-			name = Frameworks;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +237,7 @@
 				161479BD1BD6CE8F0099A068 /* Frameworks */,
 				161479BE1BD6CE8F0099A068 /* Resources */,
 				BC2A3CDF1C58F1DB00DA64B7 /* Embed Frameworks */,
+				6BA17C6F1CE68DDF008B134A /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -290,6 +299,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BA17C6F1CE68DDF008B134A /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Frameworks/Fabric.framework/run 7cece4f34d474a52f205e09e696846cebe25dde2 634deed4ee0d538886f56aec4b2c73b8e305fa6d659c093daa4b119de462d425";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		161479BC1BD6CE8F0099A068 /* Sources */ = {
@@ -435,6 +461,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ORKSample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hellothread.ResearchKit.Sample;
@@ -452,6 +483,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ORKSample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hellothread.ResearchKit.Sample;
